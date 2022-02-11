@@ -41,9 +41,10 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
         }finally {
             readByteBuf.release();
         }
+
 //        确保接受四个字节
 //        if(byteBuf.readableBytes() >= 4 ) {
-//            long currentTimeMillis = (readByteBuf.readUnsignedInt() - 2208988800L) * 1000L;
+//            long currentTimeMillis = (byteBuf.readUnsignedInt() - 2208988800L) * 1000L;
 //            System.out.println(new Date(currentTimeMillis));
 //            ctx.close();
 //        }

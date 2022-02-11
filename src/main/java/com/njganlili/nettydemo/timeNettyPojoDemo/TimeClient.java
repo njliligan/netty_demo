@@ -1,4 +1,4 @@
-package com.njganlili.nettydemo.timeNettyDemo;
+package com.njganlili.nettydemo.timeNettyPojoDemo;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -29,8 +29,6 @@ public class TimeClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            //ch.pipeline().addLast(new TimeClientHandler());
-                            //处理字节读取
                             ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
                         }
                     });
