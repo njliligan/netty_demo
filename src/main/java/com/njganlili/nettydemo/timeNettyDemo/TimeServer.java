@@ -1,7 +1,6 @@
 package com.njganlili.nettydemo.timeNettyDemo;
 
 
-import com.njganlili.nettydemo.simpleNettyDemo.DiscardServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -17,9 +16,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @date 2022/2/10 20:33
  * telnet localhost 8080
  */
-public class TimeDiscardServer {
+public class TimeServer {
     private int port;
-    public TimeDiscardServer(int port){
+    public TimeServer(int port){
         this.port = port;
     }
     public void run() throws Exception{
@@ -66,6 +65,6 @@ public class TimeDiscardServer {
         if(args.length > 0){
             port = Integer.parseInt(args[0]);
         }
-        new TimeDiscardServer(port).run();
+        new TimeServer(port).run();
     }
 }

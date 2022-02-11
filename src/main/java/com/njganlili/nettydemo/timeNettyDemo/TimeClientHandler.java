@@ -11,6 +11,7 @@ import java.util.Date;
  * @description
  * @date 2022/2/10 21:55
  */
+//这里的Channel In bound HandlerAdapter 注意其中的IN，代表的是入站事件
 public class TimeClientHandler extends ChannelInboundHandlerAdapter {
 
 //    private ByteBuf byteBuf;

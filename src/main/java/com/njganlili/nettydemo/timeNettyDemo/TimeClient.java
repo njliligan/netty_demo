@@ -34,6 +34,7 @@ public class TimeClient {
                             //ch.pipeline().addLast(new TimeDecoder(),new TimeServerHandler());
                         }
                     });
+            //Channel异步IO操作的结果
             ChannelFuture channelFuture = bootstrap.connect(host,port).sync();
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
